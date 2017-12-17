@@ -24,9 +24,9 @@ def addtimezone(lat, lon):
         tz = tf.timezone_at(lng=float(lon), lat=float(lat))
         if tz is None:
             tz = 'UTC'
-        return lat, lon, tz
-        except ValueError:
-            return (lat, lon, 'TIMEZONE') # header
+        return (lat, lon, tz)
+    except ValueError:
+        return (lat, lon, 'TIMEZONE') # header
 
 
 if __name__ == '__main__':
